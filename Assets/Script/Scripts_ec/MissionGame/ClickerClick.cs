@@ -17,8 +17,8 @@ public class ClickerClick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Sword_N = 10;
-        Score.text = "ClicK!!";
+        Sword_N = 1000;
+        Score.text = "Click!!";
        
     }
 
