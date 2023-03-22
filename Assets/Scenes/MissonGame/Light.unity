@@ -245,7 +245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 198.03, y: -47.13}
+  m_AnchoredPosition: {x: 5, y: -52}
   m_SizeDelta: {x: 79.07, y: 184.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &356248276
@@ -296,6 +296,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 498497113}
+        m_TargetAssemblyTypeName: light, Assembly-CSharp
+        m_MethodName: LightTog1
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -426,6 +438,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &498497112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498497114}
+  - component: {fileID: 498497113}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &498497113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498497112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a65953de9e14bb644ae575ae8e998036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tog1: {fileID: 356248274}
+  Tog2: {fileID: 1847717591}
+  Tog3: {fileID: 851091493}
+  success: {fileID: 1875347824}
+--- !u!4 &498497114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498497112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &671809194
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,8 +522,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 53, y: -6.9999847}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 258, y: -0.0001373291}
+  m_SizeDelta: {x: -580.41, y: 9.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &671809196
 MonoBehaviour:
@@ -535,12 +595,12 @@ RectTransform:
   m_Children:
   - {fileID: 1847717592}
   m_Father: {fileID: 1480025428}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -180, y: -6.9999847}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 13, y: 3.5081024}
+  m_SizeDelta: {x: -561.23, y: -7.0162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &737849111
 MonoBehaviour:
@@ -687,6 +747,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 498497113}
+        m_TargetAssemblyTypeName: light, Assembly-CSharp
+        m_MethodName: LightTog2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &826621209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,7 +834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 198.03, y: -47.13}
+  m_AnchoredPosition: {x: -7, y: -56}
   m_SizeDelta: {x: 79.07, y: 184.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &851091495
@@ -813,6 +885,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 498497113}
+        m_TargetAssemblyTypeName: light, Assembly-CSharp
+        m_MethodName: LightTog3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -960,9 +1044,9 @@ RectTransform:
   m_Children:
   - {fileID: 1664540954}
   - {fileID: 671809195}
-  - {fileID: 1875347825}
   - {fileID: 737849110}
   - {fileID: 1969471616}
+  - {fileID: 1875347825}
   m_Father: {fileID: 320282687}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1139,6 +1223,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 498497113}
+        m_TargetAssemblyTypeName: light, Assembly-CSharp
+        m_MethodName: LightTog3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1561692677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,7 +1386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 198.03, y: -47.13}
+  m_AnchoredPosition: {x: -0.000061035, y: -57}
   m_SizeDelta: {x: 79.07, y: 184.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1847717593
@@ -1341,6 +1437,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 498497113}
+        m_TargetAssemblyTypeName: light, Assembly-CSharp
+        m_MethodName: LightTog2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1494,6 +1602,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 498497113}
+        m_TargetAssemblyTypeName: light, Assembly-CSharp
+        m_MethodName: LightTog1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1868924303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1563,7 +1683,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1480025428}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1640,12 +1760,12 @@ RectTransform:
   m_Children:
   - {fileID: 851091494}
   m_Father: {fileID: 1480025428}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -415, y: -6.9999847}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -247, y: -0.0001373291}
+  m_SizeDelta: {x: -590.33, y: -14.032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1969471617
 MonoBehaviour:
