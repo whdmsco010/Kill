@@ -5,7 +5,82 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Main.unity
+    guid: 72d29325ed7108b49ba71b366171d78d
+  - enabled: 1
+    path: Assets/Scenes/Casino.unity
+    guid: eb4cf65e404fe574daf16d10a90ff647
+  - enabled: 1
+    path: Assets/Scenes/Church.unity
+    guid: 5ae86457d80f5d54ca15192a1fd719c8
+  - enabled: 1
+    path: Assets/Scenes/Drug.unity
+    guid: 21f2c8cc43cd0d7478bb91f58959ce8e
+  - enabled: 1
+    path: Assets/Scenes/FarmScene.unity
+    guid: 1972a582bfc3a274b962e2e0c1b72871
+  - enabled: 1
+    path: Assets/Scenes/Kingdom.unity
+    guid: 3090e6ea49410714bbfe0f579fe41c6d
+  - enabled: 1
+    path: Assets/Scenes/WaitingRoomScene.unity
+    guid: a9c7c4c707cdf50498a72004a73fc2d0
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/Light.unity
+    guid: 7a79b67530c0a4540b184e5bf14985c2
+  - enabled: 1
+    path: Assets/Scenes/PaintGame.unity
+    guid: b5481c1e142937d4bba4e94750adaaeb
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/Running.unity
+    guid: fbd943d469f2b8649a4d7acf2c47231e
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/Coupon.unity
+    guid: caa291f1cd2452149a5d530dc94f0490
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/FlickingStone.unity
+    guid: 482476915aa558d489643dca5d315c77
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/Clean.unity
+    guid: 091ea9be617ffb547aae72eb393916c2
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/RockSP.unity
+    guid: bd4b2842e3d14984197177aeb25f6386
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/Tetris.unity
+    guid: 4932595898d85ba44bd538529d97f54e
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/ColorPicker.unity
+    guid: de0627168f3019244be67a5af0a35c13
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/Select_True.unity
+    guid: 775d83518bcd87247a625119dd2aed32
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/Gravity_ball.unity
+    guid: 1e0ae9834853c7e458b780f9cb3fd8bc
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/Clicker.unity
+    guid: cfa59dac2191221499c18b1d146c9b7e
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/BoardGame.unity
+    guid: 4791deeec20bc9f44a378537379b23a3
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/NumberMemory.unity
+    guid: 71aec532b4203484d8d5583274228d9f
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/MatcingCard.unity
+    guid: 944f317d7cdcdf845afa03ca00d03b2b
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/MirrorMiro.unity
+    guid: ed831f8ac08cf04489ceb159d6d28de7
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/BulletHell.unity
+    guid: ad47f757cb6c1414f94b65542e2f5919
+  - enabled: 1
+    path: Assets/Scenes/MissonGame/SlidingPuzzle.unity
+    guid: a38810894d1f8d343b58167f4da41f39
   m_configObjects: {}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static System.Net.Mime.MediaTypeNames;
 using Debug = UnityEngine.Debug;
 
 public class RunningPlayer : MonoBehaviour
@@ -19,6 +20,7 @@ public class RunningPlayer : MonoBehaviour
     public string targetObject4;
     public string targetObject5;
     public string targetObject6;
+
 
     void Start()
     {
@@ -78,43 +80,7 @@ public class RunningPlayer : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // 충돌오브젝트가 타겟 오브젝트라면.. 게임을 중지
-        if (collision.gameObject.name == targetObject)
-        {
-            Time.timeScale = 0;
-            Debug.Log("Retry");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        else if (collision.gameObject.name == targetObject)
-        {
-            Time.timeScale = 0;
-            Debug.Log("Retry");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        else if (collision.gameObject.name == targetObject1)
-        {
-            Time.timeScale = 0;
-            Debug.Log("Retry");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        else if (collision.gameObject.name == targetObject2)
-        {
-            Time.timeScale = 0;
-            Debug.Log("Retry");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        else if (collision.gameObject.name == targetObject3)
-        {
-            Time.timeScale = 0;
-            Debug.Log("Retry");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        else if (collision.gameObject.name == targetObject4)
-        {
-            Time.timeScale = 0;
-            Debug.Log("Retry");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        else if (collision.gameObject.name == targetObject5)
+        if (collision.gameObject.name == targetObject || collision.gameObject.name == targetObject1 || collision.gameObject.name == targetObject2 || collision.gameObject.name == targetObject3 || collision.gameObject.name == targetObject4 || collision.gameObject.name == targetObject5)
         {
             Time.timeScale = 0;
             Debug.Log("Retry");
@@ -124,6 +90,7 @@ public class RunningPlayer : MonoBehaviour
         {
             Time.timeScale = 0;
             Debug.Log("Success!!");
+            SceneManager.LoadScene("FarmScene");
         }
     }
 }
