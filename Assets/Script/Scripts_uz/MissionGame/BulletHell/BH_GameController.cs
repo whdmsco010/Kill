@@ -8,24 +8,33 @@ public class BH_GameController : MonoBehaviour
     public GameObject bulletPrefab ;
     public GameObject uiStartGameObject ;
     public GameObject uiEndGameObject ;
+    public GameObject uiSuccessGameObject ;
     public Text uiTime ;
+
     int sec ;
 
-    void Start() {    
+    void Start() {  
 
+    }
+
+    private IEnumerator WaitAndPrint(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
     }
 
     public void PressStart() {
 
+        WaitAndPrint(10.0f);
         sec = 0 ;
-
         uiStartGameObject.SetActive(false) ;
         InvokeRepeating("MakeBullet", 0f, 1f) ;
-        InvokeRepeating("SetTime", 1f, 1f) ;        
-
+        InvokeRepeating("SetTime", 1f, 1f) ;     
+        
     }
 
     public void PressRestart(){
+
+        WaitAndPrint(10.0f);
         sec = 0;
         uiTime.text = ""+sec;
 
@@ -43,10 +52,26 @@ public class BH_GameController : MonoBehaviour
         sec = sec + 1 ;
         uiTime.text = "" + sec ;
 
+        if (sec==10) Success();
+
+    }
+
+    public void Success(){
+        sec = 0;
+        uiTime.text = ""+sec;
+
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("bullet");
+
+        foreach(GameObject bullet in bullets){
+            Destroy (bullet);
+        }
+
+        GameObject.Find("game").GetComponent<BH_GameController>().uiSuccessGameObject.SetActive(true);
+        Debug.Log("Success!");
     }
 
     void MakeBullet() {
-
+        WaitAndPrint(10.0f);
         GameObject bullet ;
 
         float switchValue = Random.value ;

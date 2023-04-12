@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class MatchingCardGameController : MonoBehaviour
 {
+    public GameObject uiClearGameObject ;
+
     [SerializeField]
     private Sprite bgImage;
 
@@ -128,8 +130,10 @@ public class MatchingCardGameController : MonoBehaviour
 
         if(countCorrectGuesses == gameGuesses){
             Debug.Log("Game Finished");
+            uiClearGameObject.SetActive(true);
             Debug.Log("It took you " + countGuesses + " many guess(es) to finish the game");
         }
+
     }
 
     void Shuffle(List<Sprite> list){

@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private BlockSpawner blockSpawner;
 
+    public GameObject gameClearObject;
+    public GameObject gameOverObject;
+
     // 생성한 모든 블록의 정보를 가지고 있는 리스트
     private List<Block>   blockList= new List<Block>();
 
@@ -19,6 +22,7 @@ public class GameController : MonoBehaviour
     private Color   otherOneColor; //하나의 블록에 적용하는 살짝 다른 색상
     
     private int     otherBlockIndex; //색상이 다른 하나의 블록 인덱스
+    public int  AnsCount = 0;
    
     private void Awake(){
         blockList= blockSpawner.SpawnBlocks(blockCount);
@@ -58,12 +62,18 @@ public class GameController : MonoBehaviour
         // 색상이 다른 하나의 블록과 매개변수 color의 색상이 같으면
         // 플레이어가 선택한 블록이 정답 블록 = 정답
         if(blockList[otherBlockIndex].Color == color){
+            AnsCount ++;
             //색상 재선택
             SetColors();
-            Debug.Log("색상 일치, 점수 획득 등의 처리 ..");
+            if(AnsCount == 5){
+                Debug.Log("미션 성공");
+                Debug.Log("Clear");
+                gameClearObject.SetActive(true);
+                // 바로 꺼지게 하지 않고 미션성공 화면이 나온 후, X 표시로 창을 닫게끔 하기
+            }
         } else{
             Debug.Log("실패");
-            UnityEditor.EditorApplication.ExitPlaymode();
+            gameOverObject.SetActive(true);
         }
     }
 }
