@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class go_mission : MonoBehaviour
 {
-    public int number = 0;
-    void Update()
+    public int sceneIndex;
+    public GameObject targetObject;
+
+    private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (targetObject == gameObject)
         {
-            SceneManager.LoadScene(number);
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }
