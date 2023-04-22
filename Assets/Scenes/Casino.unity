@@ -327,8 +327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43de3149160eef449899b3c13003cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DatabaseFileName: test_uz3.db
-  m_TableName: test_uz3
+  DBFileName: 
+  TableName: 
 --- !u!1 &33654035
 GameObject:
   m_ObjectHideFlags: 0

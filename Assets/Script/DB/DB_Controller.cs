@@ -8,8 +8,8 @@ public class DB_Controller
     private SqliteCommand m_DatabaseCommand;
     private SqliteDataReader m_Reader;
 
-    public string m_DatabaseFileName = "test_uz3.db";
-    public string m_TableName = "test_uz3";
+    public string m_DatabaseFileName = GameObject.Find("player").GetComponent<DemoSqlite>().DBFileName;
+    public string m_TableName = GameObject.Find("player").GetComponent<DemoSqlite>().TableName;
 
     public DB_Controller(string connectionString)
     {
