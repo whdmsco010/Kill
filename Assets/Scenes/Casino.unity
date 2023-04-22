@@ -136,8 +136,9 @@ GameObject:
   - component: {fileID: 5154078}
   - component: {fileID: 5154077}
   - component: {fileID: 5154079}
+  - component: {fileID: 5154080}
   m_Layer: 0
-  m_Name: "\uAD50\uC218"
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,6 +315,20 @@ PolygonCollider2D:
       - {x: -0.98499995, y: -1.625}
       - {x: -0.91499996, y: -1.555}
       - {x: -0.875, y: -1.475}
+--- !u!114 &5154080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5154073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43de3149160eef449899b3c13003cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DatabaseFileName: test_uz3.db
+  m_TableName: test_uz
 --- !u!1 &33654035
 GameObject:
   m_ObjectHideFlags: 0
@@ -12113,6 +12128,7 @@ GameObject:
   - component: {fileID: 2041894981}
   - component: {fileID: 2041894980}
   - component: {fileID: 2041894982}
+  - component: {fileID: 2041894983}
   m_Layer: 0
   m_Name: "\uCE74\uC9C0\uB178-\uB9F5_0000s_0002s_0007_GetLucky3"
   m_TagString: Untagged
@@ -12263,6 +12279,20 @@ PolygonCollider2D:
       - {x: -0.765, y: -3.395}
       - {x: -0.085, y: -3.365}
       - {x: 0.285, y: -3.335}
+--- !u!114 &2041894983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041894979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fd6a977c559f84bb627fc81dc4bc5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 0
+  targetObject: {fileID: 2041894979}
 --- !u!1 &2069271571
 GameObject:
   m_ObjectHideFlags: 0

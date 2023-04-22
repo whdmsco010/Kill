@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovingObject : MonoBehaviour
 {
@@ -10,8 +11,14 @@ public class MovingObject : MonoBehaviour
     public float speed;
     public Vector2 speed_vec;
 
+    public Vector2 PlayerPosition_DB(){
+        Vector2 playerPos = transform.position;
+        return playerPos;
+    }
+    
     void Update()
     {
+
         if(move_method == 0)
         {
             speed_vec = Vector2.zero;
@@ -65,5 +72,6 @@ public class MovingObject : MonoBehaviour
 
             GetComponent<Rigidbody2D>().velocity = speed_vec;
         }
+
     }
 }
