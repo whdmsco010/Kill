@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DatabaseFileName: test_uz3.db
-  m_TableName: test_uz
+  m_TableName: test_uz3
 --- !u!1 &33654035
 GameObject:
   m_ObjectHideFlags: 0
