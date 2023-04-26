@@ -1,6 +1,7 @@
 using UnityEngine;
 using Mono.Data.Sqlite;
 using System.Data;
+using static DemoSqlite;
 
 public class DB_Controller
 {
@@ -8,8 +9,10 @@ public class DB_Controller
     private SqliteCommand m_DatabaseCommand;
     private SqliteDataReader m_Reader;
 
-    public string m_DatabaseFileName = GameObject.Find("player").GetComponent<DemoSqlite>().DBFileName;
-    public string m_TableName = GameObject.Find("player").GetComponent<DemoSqlite>().TableName;
+    // DemoSqlite 말고 따른 cs에서 이름을 선언해줄 cs가 필요함. 밑에가 있을때 없을때가 있는데 사용하기 위해선
+    // 계속 db컨트롤러 불러와야하는데 얘가 방해함
+    public string m_DatabaseFileName = GameObject.Find("Main Camera").GetComponent<DemoSqlite>().DBFileName;
+    public string m_TableName = GameObject.Find("Main Camera").GetComponent<DemoSqlite>().TableName;
 
     public DB_Controller(string connectionString)
     {

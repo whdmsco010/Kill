@@ -7,6 +7,8 @@ using Debug = UnityEngine.Debug;
 using System.Collections;
 using System.Collections.Generic;
 
+//using static DB_Controller;
+
 public class DemoSqlite : MonoBehaviour
 {
     public string DBFileName;
@@ -26,18 +28,16 @@ public class DemoSqlite : MonoBehaviour
         m_DatabaseAccess.CreateTable(TableName,
             //필드명, 타입명, not null, primary key, autoincrement, unique
             new string[,] { 
-            {"player",      "INTEGER", "F", "T", "T", "F"},
-            {"score",       "INTEGER", "T", "F", "F", "F"},
-            {"location_x",  "INTEGER", "T", "F", "F", "F"},
-            {"location_y",  "INTEGER", "T", "F", "F", "F"}, 
-            {"kill",        "INTEGER", "T", "F", "F", "F"},
-            {"hint",        "TEXT", "F", "F", "F", "F"} 
+            {"Player",      "INTEGER", "F", "T", "T", "F"},
+            {"Score",       "INTEGER", "T", "F", "F", "F"},
+            {"Location_x",  "FLOAT", "T", "F", "F", "F"},
+            {"Location_y",  "FLOAT", "T", "F", "F", "F"}, 
+            {"Kill",        "INTEGER", "T", "F", "F", "F"},
+            {"Hint",        "TEXT", "F", "F", "F", "F"} 
             }
         );
         
-        m_DatabaseAccess.SqlQuery("INSERT into "+TableName+"(player, score, location_x, location_y, kill, hint) values (3,100,-10,10,0,\'테스트\')");
-        m_DatabaseAccess.SqlQuery("INSERT into "+TableName+"(player, score, location_x, location_y, kill, hint) values (4,1300,1,6,1,\'테스트22222\')");
-        m_DatabaseAccess.SqlQuery("Update "+TableName+" set (location_x, location_y)=(555,777) where player = 2");
+        m_DatabaseAccess.SqlQuery("INSERT into "+TableName+"(player, score, location_x, location_y, kill, hint) values (3, 100, 0.0, 0.0, 0, \'테스트\')");
         m_DatabaseAccess.CloseSqlConnection();
         
 
