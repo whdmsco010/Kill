@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 5154079}
   - component: {fileID: 5154080}
   m_Layer: 0
-  m_Name: player
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,8 +327,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43de3149160eef449899b3c13003cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DBFileName: 
-  TableName: 
+  DBFileName: test_uz2
+  TableName: test_uz1
+  HintTableName: test_hint
 --- !u!1 &33654035
 GameObject:
   m_ObjectHideFlags: 0
@@ -12291,8 +12292,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0fd6a977c559f84bb627fc81dc4bc5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 0
+  sceneIndex: 15
+  Player: {fileID: 5154073}
   targetObject: {fileID: 2041894979}
+  Pos_x: 
+  Pos_y: 
+  GM_DBFileName: 
+  GM_TableName: 
 --- !u!1 &2069271571
 GameObject:
   m_ObjectHideFlags: 0

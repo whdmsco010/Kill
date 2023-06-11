@@ -1,6 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
+//-------------DB 연결 헤더
+using System.IO;
+using Mono.Data.Sqlite;
+
 public class GameController : MonoBehaviour
 {
     [SerializeField]
@@ -23,13 +29,36 @@ public class GameController : MonoBehaviour
     
     private int     otherBlockIndex; //색상이 다른 하나의 블록 인덱스
     public int  AnsCount = 0;
+
+
+
+    //-------------DB 연결 정의
+    public string CP_DBFileName;
+    public string CP_HintTableName;
+    public DB_Controller CP_DBController;
    
+
+
     private void Awake(){
+
         blockList= blockSpawner.SpawnBlocks(blockCount);
         for(int i=0; i<blockList.Count; ++i){
             blockList[i].Setup(this);
         }
         SetColors();
+    }
+
+
+    void Start(){
+
+        //파일명과 테이블명은 DemoSqlite에서 한 번에 처리가능하도록 참조함
+        CP_DBFileName = GameObject.Find("Player").GetComponent<DemoSqlite>().DBFileName;
+        CP_HintTableName = GameObject.Find("Player").GetComponent<DemoSqlite>().HintTableName;
+
+        //----------DB_Controller.cs를 쓰기위한 경로 정의
+        //위 스크립트는 Monobahaviour로 이뤄진게 아니라서 경로를 따로 지정해줘야 함
+        string filePath = Path.Combine(Application.streamingAssetsPath, CP_DBFileName);
+        CP_DBController = new DB_Controller("data source = " + filePath);
     }
 
     private void SetColors(){
@@ -69,7 +98,17 @@ public class GameController : MonoBehaviour
                 Debug.Log("미션 성공");
                 Debug.Log("Clear");
                 gameClearObject.SetActive(true);
+                // 힌트 창 SetActive(true)
+                SceneManager.LoadScene(1); 
+                
+                CP_DBController.InsertInto(CP_HintTableName, new string[] {"3","날카로운 물건이다","GetLucky"});
                 // 바로 꺼지게 하지 않고 미션성공 화면이 나온 후, X 표시로 창을 닫게끔 하기
+                    // OnMouseDown 이용
+                // 창 닫으면 원래 화면으로 전환 되도록
+                    //SceneManager.LoadScene(1); 
+                    //처음에 배정받은 Scene Index를 저장하면 될듯
+                    // 그 후 화면 전환할때 Scene Index 넣어주기
+
             }
         } else{
             Debug.Log("실패");
